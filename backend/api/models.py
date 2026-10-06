@@ -101,8 +101,8 @@ class ScheduleEntry(models.Model):
         # Adicionar as restrições fortes aqui
         constraints = [
             models.UniqueConstraint(
-                fields=["timeslot"],
-                name="unique_timeslot"
+                fields=["timeslot", "class_group"],
+                name="unique_class_group_timeslot"
             )
         ]
 
